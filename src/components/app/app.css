@@ -1,0 +1,14 @@
+.app {
+   margin: 0 auto;
+   max-width: 800px;
+}
+
+img {
+   height: 100px;
+}
+
+@media (max-width: 575px) {
+   img {
+      height: 70px;
+   }
+}

@@ -1,0 +1,8 @@
+.item {
+   cursor: pointer;
+   flex-grow: 1;
+}
+
+img {
+   height: 50px;
+}

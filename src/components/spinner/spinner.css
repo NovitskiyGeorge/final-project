@@ -1,0 +1,9 @@
+.spinner {
+   margin-top: 150px;
+   display: flex;
+   justify-content: center;
+}
+
+.spinner-border {
+   padding: auto;
+}
