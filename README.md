@@ -1,70 +1,61 @@
-# Getting Started with Create React App
+# Final project
+### Deadline: 09.09
+Для выполнения этого ДЗ Вам понадобятся следующие npm-пакеты:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+* react
+* react-dom
+* react-router-dom
+* webpack
+* json-server
+* redux
 
-## Available Scripts
+Выше описаны только самые необходимые пакеты, вероятно в процессе выполнения выяснится, что необходимо что-то еще.
 
-In the project directory, you can run:
+**Задание**. Необходимо создать приложение `pokedex`.
 
-### `npm start`
+### Общие требования:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1. **Пагинация**. Может быть реализована любым способом: 
+    * Кнопка "Load more", которая подгружает следующую страницу в общий список
+    * Endless scroll. Принцип тот же, что и у load more за исключеним того, что следующая порция должна подгружаться автоматически при достижении конца страницы.
+    * Традиционная пагинация с номерами страниц
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+2. **Адаптивный дизайн**
 
-### `npm test`
+3. **Должна присутствовать навигация (меню).**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+4. **Желательно воспользоваться redux для state management**
 
-### `npm run build`
+### Требования:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. **Главная страница**. Здесь должен выводиться список покемонов плашками. В каждой плашке должна быть картинка покемона, его имя и кнопка "Поймать". Если покемон уже пойман - кнопка должна быть `disabled`. При нажатии на покемона - нужно переходить на страничку покемона.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. **Страница покемона**. Здесь должна выводится информация по указанному покемону: id, имя, картинка, статус (пойман или нет). Если покемон пойман, то нужно еще показывать дату его поимки.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. **Пойманные покемоны**. Здесь логика точно такая же, как и на главной странице, за исключением того, что выводиться должны только пойманные покемоны.
 
-### `npm run eject`
+### Рекомендации
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+1. Используйте какой-нибудь css-framework, чтобы верстка заняла минимум времени.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2. Пойманных покемонов лучше выносить в отдельную коллекцию и затем связывать их средствами json-server. Подробности можно найти в документации.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+3. Постарайтесь показать себя во всей красе. Если есть какой-то опыт с дополнительными пакетами, не указанными в списке - не стесняйтесь их использовать.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+4. Приветствуется создание доступного интерфейса.
 
-## Learn More
+5. Постарайтесь построить хорошую архитектуру приложения. Как минимум, стоит отделить бизнес-логику приложения от ее презентационного слоя (`view`).
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+6. Приветствуется покрытие unit-тестами.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+7. Поддержка браузеров: последние версии современных браузеров.
 
-### Code Splitting
+### Примечание
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Картинки покемонов и `db.json` для `json-server` можно найти в этом репозитории.
 
-### Analyzing the Bundle Size
+Использовать create-react-app можно! :)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Если не любите покемонов
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Если есть особая нетерпимость к покемонам, то можно воспользоваться любым понравившимся api и реализовать все фичи из задания (функциональность по поимке покемона можно заменить закладками, лайками и т.п.)
