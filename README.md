@@ -1,4 +1,11 @@
 # Final project
+
+### Для запуска проекта:
+
+* json-server src/db.json
+* npm start
+
+
 ### Deadline: 09.09
 Для выполнения этого ДЗ Вам понадобятся следующие npm-пакеты:
 

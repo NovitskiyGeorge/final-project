@@ -51,6 +51,7 @@ export default class PokemonPage extends Component {
          return <SpinnerBlue />
       }
       const pokemonDate = this.getSelectedPokemon();
+      console.log(pokemonDate)
       const { name, id, date, status = 'не пойман' } = pokemonDate;
       let pathImg;
 
